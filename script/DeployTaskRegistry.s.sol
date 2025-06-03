@@ -11,7 +11,7 @@ contract DeployTaskRegistryScript is Script {
         address robAddress = vm.envAddress("ROB_ADDRESS");
 
         // Begin broadcasting transactions with your Base private key
-        vm.startBroadcast(vm.envAddress("PRIVATE_KEY_BASE"));
+        vm.startBroadcast(vm.envUint("PRIVATE_KEY_BASE"));
 
         // Deploy TaskRegistry(tskToken, robAddress)
         TaskRegistry registry = new TaskRegistry(
